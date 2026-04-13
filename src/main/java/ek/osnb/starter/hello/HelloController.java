@@ -13,7 +13,7 @@ class HelloController {
 
     @GetMapping
     ResponseEntity<HelloResponse> hello() {
-        String message = "Hello, World - updated!";
+        String message = "Hello, World - Updated!";
         HelloResponse response = new HelloResponse(message);
         return ResponseEntity.ok(response);
     }
