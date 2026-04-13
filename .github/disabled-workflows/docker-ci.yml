@@ -21,14 +21,14 @@ jobs:
 
       - name: Run Docker container
         run: |
-        # Run the container in detached mode
+          # Run the container in detached mode
           docker compose up -d
           
-        # Wait for at few seconds to ensure the container is up and running
+          # Wait for at few seconds to ensure the container is up and running
           sleep 20
           
-        # Test the application endpoint
+          # Test the application endpoint
           curl -f http://localhost:8090/actuator/health || exit 1
           
-        # Stop and remove the container
+          # Stop and remove the container
           docker compose down
